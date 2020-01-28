@@ -7,12 +7,13 @@ import {
 } from "react-router-dom";
 import './App.css';
 
-const App = () => {
-  return (
-    <div className="App">
-      <h1>Dev Quiz</h1>
-    </div>
-  );
+const Form = (props) => {
+	return (
+		<div>
+			
+		</div>
+
+	)
 }
 
-export default App;
+export default Form;
