@@ -1,4 +1,5 @@
 import React from 'react';
+import Questions from './Questions.js';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,7 +16,7 @@ const Navigation = (props) => {
         <nav>
           <ul>
           <li>
-              <Link id="take_quiz" className="nav-item" to="/">Resources</Link>
+              <Link id="resources" className="nav-item" to="/">Resources</Link>
             </li>
             <li>
               <Link id="about_section" className="nav-item" to="/about">About</Link>
@@ -33,6 +34,9 @@ const Navigation = (props) => {
           
           <Route path="/about">
 
+          </Route>
+          <Route path="/test">
+          	<Questions />
           </Route>
         </Switch>
         </div>

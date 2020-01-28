@@ -28,12 +28,15 @@ const Form = (props) => {
         
           <Checkbox onInput="" value="non-binary" name="nonbinary"/> Non-binary
           </div>
-          <Button className="btn" variant="outlined" size="large" onClick={props.handleClick}>
+        <Router>
+        <div>
+        <Link to="/test" className="submit-btn">{ <Button className="btn" variant="outlined" size="large" onClick={props.handleClick}>
           submit
-        </Button>
+        </Button> }</Link>
+        </div>
+        </Router>
 		</div>
-
-	);
+		);
 }
 
 export default Form; 
