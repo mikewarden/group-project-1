@@ -17,26 +17,24 @@ const Form = (props) => {
         <br/>
         <TextField label="Occupation" className="" onInput="" margin="normal" variant="outlined" />
         <br/>
-        <TextField id="date" label="Date of Birth" type="date"
+        	<TextField id="date" label="Date of Birth" type="date"
         defaultValue="2020-01-01" onInput=""  InputLabelProps={{shrink: true,}} margin="normal" variant="outlined"/>
 
-        <div className="radio-inputs">
-        <h4>Gender</h4>
-          <Checkbox onInput="" value="female" name="female"/> Female
+        	<div className="radio-inputs">
+        		<h4>Gender</h4>
+          		<Checkbox onInput="" value="female" name="female"/> Female
       
-          <Checkbox onInput="" value="male" name="male"/> Male
+          		<Checkbox onInput="" value="male" name="male"/> Male
         
-          <Checkbox onInput="" value="non-binary" name="nonbinary"/> Prefer not to say
-          </div>
+          		<Checkbox onInput="" value="non-binary" name="nonbinary"/> Prefer not to say
+            </div>
           <br/>
-        <div>
-        <Link to="/test" className="submit-btn">{ <Button className="btn" variant="outlined" size="large" onClick={props.handleClick}>
-          submit
-        </Button> }</Link>
-        </div>
+        	<div>
+        		<Link to="/test" className="submit-btn">{ <Button className="btn" variant="outlined" size="large" onClick={props.handleClick}> submit </Button> }</Link>
+        	</div>
         
 		</div>
-		);
+	);
 }
 
 export default Form; 
