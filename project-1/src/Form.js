@@ -26,15 +26,14 @@ const Form = (props) => {
       
           <Checkbox onInput="" value="male" name="male"/> Male
         
-          <Checkbox onInput="" value="non-binary" name="nonbinary"/> Non-binary
+          <Checkbox onInput="" value="non-binary" name="nonbinary"/> Prefer not to say
           </div>
-        <Router>
         <div>
         <Link to="/test" className="submit-btn">{ <Button className="btn" variant="outlined" size="large" onClick={props.handleClick}>
           submit
         </Button> }</Link>
         </div>
-        </Router>
+        
 		</div>
 		);
 }
