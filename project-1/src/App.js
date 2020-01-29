@@ -37,9 +37,12 @@ const App = () => {
           <h1>Dev Quiz</h1>
           	<Form />
           </Route>
+          <Route path="/resources">
+          	<h2>Resources</h2>
+          </Route>
           
           <Route path="/about">
-
+          	<h2>About</h2>
           </Route>
           <Route path="/test">
           <h1>Dev Quiz</h1>

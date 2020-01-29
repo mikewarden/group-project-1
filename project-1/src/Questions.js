@@ -11,7 +11,6 @@ import './App.css';
 const Questions = () => {
   return (
     <div className="App">
-      <h1>Dev Quiz</h1>
       <h2>Question Area</h2>
     </div>
   );

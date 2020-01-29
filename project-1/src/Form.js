@@ -28,6 +28,7 @@ const Form = (props) => {
         
           <Checkbox onInput="" value="non-binary" name="nonbinary"/> Prefer not to say
           </div>
+          <br/>
         <div>
         <Link to="/test" className="submit-btn">{ <Button className="btn" variant="outlined" size="large" onClick={props.handleClick}>
           submit
