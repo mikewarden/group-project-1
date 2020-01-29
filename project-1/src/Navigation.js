@@ -1,6 +1,8 @@
 import React from 'react';
 import Questions from './Questions.js';
 import Form from './Form.js';
+import About from './About.js';
+import Resources from './Resources.js';
 import {
   BrowserRouter as Router,
   Switch,
@@ -31,17 +33,15 @@ const Navigation = (props) => {
 
                     <div id="content_body">
                         <Switch>
-          
                             <Route exact path="/">
                                 <h1>Dev Quiz</h1>
           	                    <Form />
                             </Route>
                             <Route path="/resources">
-          	                    <h2>Resources</h2>
+          	                    <Resources />
                             </Route>
-          
-                            <Route path="/about">
-          	                    <h2>About</h2>
+                             <Route path="/about">
+          	                    <About />
                             </Route>
                             <Route path="/test">
                                 <h1>Dev Quiz</h1>
