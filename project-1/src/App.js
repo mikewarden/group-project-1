@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'; 
 import Form from './Form.js';
-import Navigation from './Navigation';
 import Questions from './Questions.js';
 import {
   BrowserRouter as Router,
@@ -16,7 +15,7 @@ const App = () => {
     <div className="App">
     <Router>
       <div>
-        <nav>
+        <nav id="navbar">
           <ul>
           <li>
               <Link id="home" className="nav-item" to="/">Home</Link>
