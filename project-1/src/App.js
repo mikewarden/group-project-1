@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className="App">
     	<Navigation />
-    	<footer>Group Project 2020.</footer>
+    	<br/>
     </div>
   );
 }

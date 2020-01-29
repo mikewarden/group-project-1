@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  min-height: 100%;
 }
 
 nav ul li {
@@ -24,9 +25,25 @@ h1 {
 
 .submit-btn {
   margin-top: 30px;
+  margin-bottom: 50px;
   text-decoration: none;
 }
 
 .btn {
   margin-top: 30px;
+  margin-bottom: 140px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-top: 40px;
+  margin-left: 40%;
+  text-align: center;
+
+}
+
+#open-select {
+  width: 90px;
+  display: inline-flex;
 }
