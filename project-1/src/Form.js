@@ -13,27 +13,16 @@ const Form = (props) => {
 	return (
 		<div>
 			<TextField label="UserName" className="name-field" onInput="" margin="normal" variant="outlined" />
+      <br/>
+        <div className="radio-inputs">
+          <br/>
+          	<Checkbox onInput="" value="female" name="female"/> Female
+          	<Checkbox onInput="" value="male" name="male"/> Male
+          	<Checkbox onInput="" value="non-binary" name="nonbinary"/> Non-binary
+          	<Checkbox onInput="" value="other" name="other"/> Other
+          	<Checkbox onInput="" value="none" name="none"/> Prefer not to say
+        </div>
         <br/>
-        <TextField label="Occupation" className="" onInput="" margin="normal" variant="outlined" />
-        <br/>
-        	<TextField id="date" label="Date of Birth" type="date"
-        defaultValue="2020-01-01" onInput=""  InputLabelProps={{shrink: true,}} margin="normal" variant="outlined"/>
-
-        
-
-        	<div className="radio-inputs">
-        	<br/>
-        		
-          		<Checkbox onInput="" value="female" name="female"/> Female
-      
-          		<Checkbox onInput="" value="male" name="male"/> Male
-        
-          		<Checkbox onInput="" value="non-binary" name="nonbinary"/> Non-binary
-          		<Checkbox onInput="" value="other" name="other"/> Other
-          		<Checkbox onInput="" value="none" name="none"/> Prefer not to say
-            </div>
-            <div>
-      	<br/>
         <InputLabel id="open-select-label">Choose a Language:</InputLabel>
         <Select
           labelId="open-select-label"
@@ -53,14 +42,11 @@ const Form = (props) => {
           <MenuItem value={2}>Mid-Level</MenuItem>
           <MenuItem value={3}>Advanced</MenuItem>
         </Select>
-      
-    </div>
           <br/>
         	<div>
         		<Link to="/test" className="submit-btn">{ <Button className="btn" variant="outlined" size="large" onClick={props.handleClick}> submit </Button> }</Link>
         	</div>
-        
-		</div>
+    </div>
 	);
 }
 
