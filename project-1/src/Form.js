@@ -13,15 +13,7 @@ const Form = (props) => {
 	return (
 		<div>
 			<TextField label="UserName" className="name-field" onInput="" margin="normal" variant="outlined" />
-      <br/>
-        <div className="radio-inputs">
-          <br/>
-          	<Checkbox onInput="" value="female" name="female"/> Female
-          	<Checkbox onInput="" value="male" name="male"/> Male
-          	<Checkbox onInput="" value="non-binary" name="nonbinary"/> Non-binary
-          	<Checkbox onInput="" value="other" name="other"/> Other
-          	<Checkbox onInput="" value="none" name="none"/> Prefer not to say
-        </div>
+      	<br/>
         <br/>
         <InputLabel id="open-select-label">Choose a Language:</InputLabel>
         <Select
@@ -42,6 +34,8 @@ const Form = (props) => {
           <MenuItem value={2}>Mid-Level</MenuItem>
           <MenuItem value={3}>Advanced</MenuItem>
         </Select>
+          <br/>
+          <br/>
           <br/>
         	<div>
         		<Link to="/test" className="submit-btn">{ <Button className="btn" variant="outlined" size="large" onClick={props.handleClick}> submit </Button> }</Link>
