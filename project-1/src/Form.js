@@ -10,9 +10,16 @@ import Select from '@material-ui/core/Select';
 import './App.css';
 
 const Form = (props) => {
+
+  const [username, setUsername] = React.useState("");
+
+  const handleInput = (e) => {
+    setUsername(e.target.value);
+  }
+
 	return (
 		<div>
-			<TextField label="UserName" className="name-field" onInput="" margin="normal" variant="outlined" />
+			<TextField label="UserName" className="name-field" onInput={handleInput} margin="normal" variant="outlined" />
       	<br/>
         <br/>
         <InputLabel id="open-select-label">Choose a Language:</InputLabel>
