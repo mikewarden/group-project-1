@@ -3,15 +3,16 @@ import Questions from './Questions.js';
 import Form from './Form.js';
 import About from './About.js';
 import Resources from './Resources.js';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './App.css';
 
 const Navigation = (props) => {
+
+    const [user, setUser] = React.useState("User");
+
+    const handleNameChange = (name) => {
+    setUser(name);
+  }
 	return (
 		<div>
 			<Router>
@@ -35,7 +36,7 @@ const Navigation = (props) => {
                         <Switch>
                             <Route exact path="/">
                                 <h1>Dev Quiz</h1>
-          	                    <Form />
+          	                    <Form  />
                             </Route>
                             <Route path="/resources">
           	                    <Resources />
@@ -45,6 +46,7 @@ const Navigation = (props) => {
                             </Route>
                             <Route path="/test">
                                 <h1>Dev Quiz</h1>
+                                <h3>Hello {user}</h3>
           	                     <Questions />
                             </Route>
                         </Switch>
