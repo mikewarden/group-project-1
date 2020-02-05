@@ -13,6 +13,7 @@ const Navigation = (props) => {
     const handleNameChange = (name) => {
     setUser(name);
   }
+    
 	return (
 		<div>
 			<Router>

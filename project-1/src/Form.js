@@ -12,12 +12,15 @@ import './App.css';
 const Form = (props) => {
 
   const [username, setUsername] = React.useState("");
+  const [language, setLanguage] = React.useState("");
 
   const handleInput = (e) => {
     setUsername(e.target.value);
   }
-
-
+  const handleLanguage = (e) => {
+    setLanguage(e.target.value);
+      }
+ 
 	return (
 		<div>
 			<TextField label="UserName" className="name-field" onInput={handleInput}  margin="normal" variant="outlined" />
@@ -26,7 +29,8 @@ const Form = (props) => {
         <InputLabel id="open-select-label">Choose a Language:</InputLabel>
         <Select
           labelId="open-select-label"
-          id="open-select">
+          id="open-select" onChange={handleLanguage}>
+           <MenuItem value=''> <em>None</em> </MenuItem>
           <MenuItem value={1}>Java</MenuItem>
           <MenuItem value={2}>Python</MenuItem>
           <MenuItem value={3}>JavaScript</MenuItem>
