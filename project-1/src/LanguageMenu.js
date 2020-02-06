@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function ControlledOpenSelect() {
+export default function LanguageMenu() {
   const classes = useStyles();
   const [language, setLanguage] = React.useState('');
   const [open, setOpen] = React.useState(false);
@@ -38,7 +38,6 @@ export default function ControlledOpenSelect() {
 
   return (
     <div>
-      <Button className={classes.button} id="language-select-btn" onClick={handleOpen}></Button>
       <FormControl className={classes.formControl}>
         <InputLabel id="demo-controlled-open-select-label">Choose a Language: </InputLabel>
         <br/>

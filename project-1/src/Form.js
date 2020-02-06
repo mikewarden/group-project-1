@@ -8,6 +8,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import LanguageMenu from './LanguageMenu.js';
+import ExperienceMenu from './ExperienceMenu.js';
 import './App.css';
 
 const Form = (props) => {
@@ -25,22 +26,9 @@ const Form = (props) => {
 	return (
 		<div>
 			<TextField label="UserName" className="name-field" onInput={handleInput}  margin="normal" variant="outlined" />
-      	<br/>
-   
-        
         <LanguageMenu />
-      	<br/>
-      	<br/>
-        <InputLabel id="open-select-label">Level of Experience:</InputLabel>
-        <Select
-          labelId="open-select-label"
-          id="open-select">
-          <MenuItem value={1}>Beginner</MenuItem>
-          <MenuItem value={2}>Mid-Level</MenuItem>
-          <MenuItem value={3}>Advanced</MenuItem>
-        </Select>
-          <br/>
-          <br/>
+        <ExperienceMenu />
+          
           <br/>
         	<div>
         		<Link to="/test" className="submit-btn">{ <Button className="btn" variant="outlined" size="large" onClick={props.handleClick}> submit </Button> }</Link>
