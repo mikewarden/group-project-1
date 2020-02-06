@@ -7,6 +7,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import LanguageMenu from './LanguageMenu.js';
 import './App.css';
 
 const Form = (props) => {
@@ -25,17 +26,9 @@ const Form = (props) => {
 		<div>
 			<TextField label="UserName" className="name-field" onInput={handleInput}  margin="normal" variant="outlined" />
       	<br/>
-        <br/>
-        <InputLabel id="open-select-label">Choose a Language:</InputLabel>
-        <Select
-          labelId="open-select-label"
-          id="open-select" onChange={handleLanguage}>
-           <MenuItem value=''> <em>None</em> </MenuItem>
-          <MenuItem value={1}>Java</MenuItem>
-          <MenuItem value={2}>Python</MenuItem>
-          <MenuItem value={3}>JavaScript</MenuItem>
-          <MenuItem value={4}>C++</MenuItem>
-        </Select>
+   
+        
+        <LanguageMenu />
       	<br/>
       	<br/>
         <InputLabel id="open-select-label">Level of Experience:</InputLabel>
