@@ -26,6 +26,8 @@ export default function LanguageMenu() {
 
   const handleChange = event => {
     setLanguage(event.target.value);
+    console.log(event.target.value);
+
   };
 
   const handleClose = () => {
