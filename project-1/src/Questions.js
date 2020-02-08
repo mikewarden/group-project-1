@@ -4,7 +4,7 @@ import './App.css';
 const Questions = () => {
 
   const getQuestionsFromAPI = ()=> {
-    let randQuestion
+    let randQuestion;
     fetch("http://localhost:8080/dev_survey/" + randQuestion)
     .then((res) => res.json())
     .then((response)=>{
