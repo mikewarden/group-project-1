@@ -19,13 +19,12 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function LanguageMenu() {
+export default function LanguageMenu(props) {
   const classes = useStyles();
-  const [language, setLanguage] = React.useState('');
   const [open, setOpen] = React.useState(false);
 
   const handleChange = event => {
-    setLanguage(event.target.value);
+    props.onInput(event.target.value);
     console.log(event.target.value);
 
   };
@@ -51,7 +50,6 @@ export default function LanguageMenu() {
           open={open}
           onClose={handleClose}
           onOpen={handleOpen}
-          value={language}
           onChange={handleChange}
         >
           <MenuItem value="">
