@@ -10,19 +10,25 @@ const Form = (props) => {
 
   const [username, setUsername] = React.useState("");
   const [language, setLanguage] = React.useState("");
+  const [experience, setExperience] = React.useState("");
 
   const handleInput = (e) => {
     setUsername(e.target.value);
   }
-  const handleLanguage = (e) => {
-    setLanguage(e.target.value);
-      }
+
+  const handleLanguage = (newLanguage) => {
+    setLanguage(newLanguage);
+  }
+
+  const handleExperience = (experienceLevel) => {
+    setExperience(experienceLevel);
+  }
  
 	return (
 		<div>
 			<TextField label="UserName" className="name-field" onInput={handleInput}  margin="normal" variant="outlined" />
-        <LanguageMenu />
-        <ExperienceMenu />
+        <LanguageMenu onInput={handleLanguage}/>
+        <ExperienceMenu onInput={handleExperience} />
           
           <br/>
         	<div>
