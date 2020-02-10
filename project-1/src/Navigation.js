@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Questions from './Questions.js';
 import Form from './Form.js';
 import About from './About.js';
@@ -9,41 +9,10 @@ import './App.css';
 const Navigation = (props) => {
    
     const [user, setUser] = React.useState("User");
-    
-  const [users, setUsers] = React.useState([]);
-  const [username, setUsername] = React.useState("");
+    const [selectedQuestion, setSelectedQuestion] = React.useState([]);
 
-
-  const getDataFromAPI = () => {
-    fetch("http://localhost:8080/users")
-      .then( (res) => res.json() )
-      .then( (response) => {
-        setUsers(response);
-        console.log(response);
-    });
-  }
-
-  useEffect(() => {
-    getDataFromAPI();
-  },[]);
-
-  const saveUser = (newUser) => {
-    fetch("http://localhost:8080/user",
-    {
-      method  : "post",
-      headers : { "Content-Type" : "application/json" },
-      body    : JSON.stringify({
-        id : 0,
-        username : "",
-        experienceLevel : "",
-        languages : ["C++", "Java", "Javascript", "Python"],
-        selectedLanguage : "",
-        selectedCategory : "Job Training"
-      })
-    })
-    .then(() => { 
-      getDataFromAPI();
-    });
+    const handleNameChange = (name) => {
+    setUser(name);
   }
 
     const getQuestionsFromAPI = ()=> {
@@ -51,7 +20,7 @@ const Navigation = (props) => {
     fetch("http://localhost:8080/entry/" + randQuestion)
     .then((res) => res.json())
     .then((response)=>{
-      console.log(response);
+      console.log(response.question);
       setSelectedQuestion(response.question);
     }).catch((err) => console.log(err));
     
@@ -80,11 +49,7 @@ const Navigation = (props) => {
                         <Switch>
                             <Route exact path="/">
                                 <h1>Dev Quiz</h1>
-<<<<<<< HEAD
           	                    <Form  handleClick={getQuestionsFromAPI} question={"hello"}/>
-=======
-          	                    <Form  handleClick={saveUser}/>
->>>>>>> a98d4d0e4d686bc9778f2a453f99f800dd3ffa60
                             </Route>
                             <Route path="/resources">
           	                    <Resources />
@@ -94,7 +59,7 @@ const Navigation = (props) => {
                             </Route>
                             <Route path="/test">
                                 <h1>Dev Quiz</h1>
-                                <h3>Hello {username}</h3>
+                                <h3>Hello {user}</h3>
           	                     <Questions />
                                  <p>{selectedQuestion}</p>
                             </Route>
