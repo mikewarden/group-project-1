@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import LanguageMenu from './LanguageMenu.js';
