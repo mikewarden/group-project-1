@@ -25,6 +25,9 @@ const Navigation = (props) => {
     }).catch((err) => console.log(err));
     
   }
+    const  changeName = (newName) => {
+    setUser(newName);
+  }
     
 	return (
 		<div>
@@ -49,7 +52,7 @@ const Navigation = (props) => {
                         <Switch>
                             <Route exact path="/">
                                 <h1>Dev Quiz</h1>
-          	                    <Form  handleClick={getQuestionsFromAPI} question={"hello"}/>
+          	                    <Form  handleClick={getQuestionsFromAPI} question={"hello"} changeUserName={changeName}/>
                             </Route>
                             <Route path="/resources">
           	                    <Resources />
