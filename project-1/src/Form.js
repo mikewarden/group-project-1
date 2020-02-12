@@ -14,7 +14,7 @@ const Form = (props) => {
 
   const handleInput = (e) => {
     setUsername(e.target.value);
-    props.changeUserName(e.target.value);
+    props.changeUserName(username);
   }
 
   const handleLanguage = (newLanguage) => {
