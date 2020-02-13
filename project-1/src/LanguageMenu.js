@@ -52,13 +52,13 @@ export default function LanguageMenu(props) {
           onOpen={handleOpen}
           onChange={handleChange}
         >
-          <MenuItem value="">
+          <MenuItem value="" >
             <em>None</em>
           </MenuItem>
-          <MenuItem value={1}>C++</MenuItem>
-          <MenuItem value={2}>Java</MenuItem>
-          <MenuItem value={3}>JavaScript</MenuItem>
-          <MenuItem value={4}>Python</MenuItem>
+          <MenuItem value={"C++"} >C++</MenuItem>
+          <MenuItem value={"Java"} >Java</MenuItem>
+          <MenuItem value={"JavaScript"} >JavaScript</MenuItem>
+          <MenuItem value={"Python"}>Python</MenuItem>
         </Select>
       </FormControl>
     </div>

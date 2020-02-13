@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import LanguageMenu from './LanguageMenu.js';
 import ExperienceMenu from './ExperienceMenu.js';
+import UserName from './UserName.js';
 import './App.css';
 
 const Form = (props) => {
@@ -12,13 +13,14 @@ const Form = (props) => {
   const [language, setLanguage] = React.useState("");
   const [experience, setExperience] = React.useState("");
 
-  const handleInput = (e) => {
-    setUsername(e.target.value);
-    props.changeUserName(username);
+  const handleName = (newName) => {
+    setUsername(newName);
+    props.changeUserName(newName);
   }
 
   const handleLanguage = (newLanguage) => {
     setLanguage(newLanguage);
+    props.changeLanguage(newLanguage);
   }
 
   const handleExperience = (experienceLevel) => {
@@ -27,7 +29,7 @@ const Form = (props) => {
  
 	return (
 		<div>
-			<TextField label="UserName" className="name-field" onInput={handleInput}  margin="normal" variant="outlined" />
+		<UserName onInput={handleName}/>	
         <LanguageMenu onInput={handleLanguage}/>
         <ExperienceMenu onInput={handleExperience} />
           

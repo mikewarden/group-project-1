@@ -10,10 +10,7 @@ const Navigation = (props) => {
    
     const [user, setUser] = React.useState("User");
     const [selectedQuestion, setSelectedQuestion] = React.useState([]);
-
-    const handleNameChange = (name) => {
-    setUser(name);
-  }
+    const [language, setLanguage] = React.useState("");
 
     const getQuestionsFromAPI = ()=> {
     let randQuestion = 1;
@@ -28,6 +25,10 @@ const Navigation = (props) => {
     const  changeName = (newName) => {
     setUser(newName);
   }
+
+    const changeLanguage = (newLanguage) => {
+        setLanguage(newLanguage);
+    }
     
 	return (
 		<div>
@@ -52,7 +53,7 @@ const Navigation = (props) => {
                         <Switch>
                             <Route exact path="/">
                                 <h1>Dev Quiz</h1>
-          	                    <Form  handleClick={getQuestionsFromAPI} question={"hello"} changeUserName={changeName}/>
+          	                    <Form  handleClick={getQuestionsFromAPI} changeUserName={changeName} changeLanguage={changeLanguage}/>
                             </Route>
                             <Route path="/resources">
           	                    <Resources />
@@ -62,7 +63,8 @@ const Navigation = (props) => {
                             </Route>
                             <Route path="/test">
                                 <h1>Dev Quiz</h1>
-                                <h3>Hello {user}</h3>
+                                <h2>{language} Questions</h2>
+                                <h3>Hello { user } </h3>
           	                     <Questions />
                                  <p>{selectedQuestion}</p>
                             </Route>
