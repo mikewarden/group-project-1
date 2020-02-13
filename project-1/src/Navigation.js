@@ -11,9 +11,10 @@ const Navigation = (props) => {
     const [user, setUser] = React.useState("User");
     const [selectedQuestion, setSelectedQuestion] = React.useState([]);
     const [language, setLanguage] = React.useState("");
+    const [experience, setExperience] = React.useState("");
 
     const getQuestionsFromAPI = ()=> {
-    let randQuestion = 1;
+    let randQuestion = 2;
     fetch("http://localhost:8080/entry/" + randQuestion)
     .then((res) => res.json())
     .then((response)=>{
@@ -28,6 +29,10 @@ const Navigation = (props) => {
 
     const changeLanguage = (newLanguage) => {
         setLanguage(newLanguage);
+    }
+
+    const changeExperience = (newExperience) => {
+        setExperience(newExperience);
     }
     
 	return (
@@ -53,7 +58,8 @@ const Navigation = (props) => {
                         <Switch>
                             <Route exact path="/">
                                 <h1>Dev Quiz</h1>
-          	                    <Form  handleClick={getQuestionsFromAPI} changeUserName={changeName} changeLanguage={changeLanguage}/>
+          	                    <Form  handleClick={getQuestionsFromAPI} changeUserName={changeName} changeLanguage={changeLanguage}
+                                    changeExperience={changeExperience}/>
                             </Route>
                             <Route path="/resources">
           	                    <Resources />
@@ -63,8 +69,8 @@ const Navigation = (props) => {
                             </Route>
                             <Route path="/test">
                                 <h1>Dev Quiz</h1>
-                                <h2>{language} Questions</h2>
-                                <h3>Hello { user } </h3>
+                                <h2>Hello { user } </h2>
+                                <h3>{experience} {language} Questions</h3>
           	                     <Questions />
                                  <p>{selectedQuestion}</p>
                             </Route>

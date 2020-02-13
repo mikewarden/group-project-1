@@ -25,6 +25,7 @@ const Form = (props) => {
 
   const handleExperience = (experienceLevel) => {
     setExperience(experienceLevel);
+    props.changeExperience(experienceLevel);
   }
  
 	return (

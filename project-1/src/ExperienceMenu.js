@@ -19,13 +19,12 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function ExperienceMenu() {
+export default function ExperienceMenu(props) {
   const classes = useStyles();
-  const [experience, setExperience] = React.useState('');
   const [open, setOpen] = React.useState(false);
 
   const handleChange = event => {
-    setExperience(event.target.value);
+    props.onInput(event.target.value);
   };
 
   const handleClose = () => {
@@ -49,15 +48,15 @@ export default function ExperienceMenu() {
           open={open}
           onClose={handleClose}
           onOpen={handleOpen}
-          value={experience}
+          
           onChange={handleChange}
         >
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={1}>Beginner</MenuItem>
-          <MenuItem value={2}>Mid-Level</MenuItem>
-          <MenuItem value={3}>Advanced</MenuItem>
+          <MenuItem value={"Beginner"}>Beginner</MenuItem>
+          <MenuItem value={"Mid-Level"}>Mid-Level</MenuItem>
+          <MenuItem value={"Advanced"}>Advanced</MenuItem>
           
         </Select>
       </FormControl>
